@@ -1,4 +1,5 @@
 import 'package:flutterfore_app/components/blur_container/blur_container_one_view.dart';
+import 'package:flutterfore_app/components/calendar_template/calendar_template.dart';
 import 'package:flutterfore_app/components/counting_text/counting_text_one_view.dart';
 import 'package:flutterfore_app/components/date_select_drawer/date_select_one_view.dart';
 import 'package:flutterfore_app/components/marquee/marquee_one_view.dart';
@@ -13,7 +14,7 @@ import 'package:flutterfore_app/navigation/go_paths.dart';
 import 'package:go_router/go_router.dart';
 
 final goConfig = GoRouter(
-  initialLocation: GoPaths.onboardingOne,
+  initialLocation: GoPaths.calendarTemplateOne,
   routes: [
     GoRoute(
       path: GoPaths.home,
@@ -91,6 +92,14 @@ final goConfig = GoRouter(
       path: GoPaths.countingText,
       builder: (context, state) {
         return const CountingTextOneView();
+      },
+    ),
+
+    //    calendar_template Route
+    GoRoute(
+      path: GoPaths.calendarTemplateOne,
+      builder: (context, state) {
+        return const CalendarTemplateOne();
       },
     ),
   ],
